@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer components{
+    /* body */
+    body{
+    background:#ffffff;
+    color:#333;
+    }
+    @media (max-width:768px) {
+      body{
+      padding-bottom: 300px;
+      }
+      
+    }
+    /* header  */
+    .header{
+        width:100%;
+    }
+     @media (min-width: 1024px) {
+        .left{
+          width:40vw;
+        }
+    }
+
+   .kdr-logo:hover .home{
+    opacity: 1;
+   }
+
+     /* main */
+     .main{
+      height:80vh;
+      
+  }
+  
+    .about-first,.here{
+        width: 510px;
+    }
+    .members{
+        width: 1000px;
+    }
+  
+
+    .message{
+        width: 500px;
+    }
+    .footer{
+        background: black;
+        width:100vw;
+    }
+   
+    .back-to-top.visible {
+        right: 6px;
+        opacity: 1;
+
+      }
+      .head-office:hover .add-absolute{
+        opacity: 1;
+      }
+  .relative-btn:hover .absolute-btn{
+    opacity: 1;
+  }
+  /* our team */
+  .team-one.show .more-info{
+    display: block;
+  }
+  
+  .fa-bars{
+    display: none !important;
+  }
+  @media (max-width:1024px) {
+    .fa-bars{
+        display:block !important;
+    }
+    
+  }
+}
