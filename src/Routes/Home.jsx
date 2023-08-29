@@ -13,7 +13,7 @@ import ContactUs from './Contact'
 export default function Home() {
   return (
     <>
-    <div className="main-home pt-20 grid" id='home'>
+    <div className="main-home w-screen pt-20 grid" id='home'>
         <Main/>
          <About/>
         <Career/>

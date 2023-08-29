@@ -45,7 +45,7 @@ const TeamMember2 = () => {
                      <button onClick={handleCloseClick}>
                     <i class="fa-solid fa-x absolute text-xl top-1 right-2 text-red-600  hover:bg-red-100 p-2 rounded-full hover:scale-110 duration-500"></i>
                      </button>
-                    <p>This is more Info about Pawan Bhusal</p>
+                    <p className='text-black'>This is more Info about Pawan Bhusal</p>
                     </div>
                 </div>
             </div>

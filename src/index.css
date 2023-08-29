@@ -3,17 +3,27 @@
 @tailwind utilities;
 @layer components{
     /* body */
-    body{
-    background:#ffffff;
-    color:#333;
-        /* overflow-x: hidden; */
+    * {
+      box-sizing: border-box;
     }
+    
+    body {
+      background:#ffffff;
+    color:#333;
+      font-family: 'Muli', sans-serif;
+      height: 100vh;
+      overflow-x: hidden;
+      margin: 0;
+    }
+
+
     @media (max-width:768px) {
       body{
       padding-bottom: 300px;
       }
       
     }
+    
     /* header  */
     .header{
         width:100%;
@@ -34,15 +44,44 @@
       
   }
   
-  .about,.career,.contact-us,.ourTeams,.quick-links,.main-services{
+  .about,.career,.ourTeams,.quick-links{
     height:700px;
   }
+ 
     .about-first,.here{
         width: 510px;
     }
     .members{
         width: 1000px;
     }
+     /* dark mode  */
+     .dark-mode:hover .ab-sun{
+      display: block;
+     }
+     .root-layout{
+      background:white;
+    }
+
+    .root-layout.dark{
+    background:#232529;
+    color: white;
+    }
+    .root-layout .header{
+      background-color: white;
+    }
+    .root-layout.dark .header{
+      background:#232529;
+     
+    }
+    .root-layout.dark .Contact, .root-layout.dark .back-to-top {
+      background: white;
+      color: black;
+    }
+    .root-layout.dark .fa-circle-pause ,.root-layout.dark .fa-circle-play, .root-layout.dark .solid-circle,  .root-layout.dark .regular-circle{
+      color: white;
+    }
+
+
   
 
     .message{

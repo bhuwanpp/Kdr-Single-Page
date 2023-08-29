@@ -7,8 +7,27 @@ import { Outlet } from "react-router-dom";
 import { Link } from 'react-scroll';
 
 
+  // dark mode 
+  const DarkModeToggle = ({ isDarkMode, toggleDarkMode }) => {
+    return (
+      <div className={`dark-mode text-4xl ml-4 lg:ml-10 relative cursor-pointer mr-5 duration-500 `} onClick={toggleDarkMode}>
+        <div className={`sun ${isDarkMode ? '' : 'hidden'}`}>
+          <iconify-icon icon="ph:sun-thin"></iconify-icon>
+        </div>
+        <div className={`moon ${isDarkMode ? 'hidden' : ''}`}>
+          <iconify-icon icon="ph:moon-thin"></iconify-icon>
+        </div>
+        <div className="ab-sun hidden font-mono bg-gray-700 px-2 py-1 rounded-lg text-white text-sm absolute -left-24 top-11 flex-nowrap whitespace-nowrap pointer-events-none">
+          <p>Change theme</p>
+        </div>
+      </div>
+    );
+  };
+
 export default function RootLayout() {
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(false); 
+
   // toogle nav 
   const toggleNav = () => {
     setIsNavOpen(!isNavOpen);
@@ -32,15 +51,32 @@ export default function RootLayout() {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
+
+
+
   }, []);
+
+  //dark mode 
+  
+  
+  const toggleDarkMode = () => {
+    setIsDarkMode(!isDarkMode);
+     // Toggle the theme when the sun icon is clicked
+  };
+
+  useEffect(() => {
+    // Add a class to the body based on the current theme
+    document.body.classList.toggle("dark-theme", isDarkMode);
+  }, [isDarkMode]);
+  
   return (
-    <div className="root-layout ">
-      <div className="header flex items-center justify-between  fixed top-0  h-20 z-30 bg-gray-50 ">
-        <Header/>
+    <div className={`root-layout ${isDarkMode ? 'dark' : ''}`}>
+      <div className="header flex items-center justify-between  fixed top-0  h-20 z-30  ">
+      <Header isDarkMode={isDarkMode} />
         <nav
-          className={`nav items-center absolute right-1 top-20 z-10 w-44 h-96  justify-between mt-4 text-lg ${
-            isNavOpen ? "grid " : "hidden"
-          } lg:flex lg:justify-between lg:text-xl  lg:relative lg:nav-width  lg:w-full lg:h-full lg:top-0    p-1 pl-5 pr-2 rounded-2xl`} id="nav"
+          className={`nav items-center justify-items-center absolute top-24 left-10 right-96 cursor-pointer z-10  sm:w-11/12 w-10/12 h-96  ${isDarkMode? 'bg-gray-200': 'bg-gray-100'} text-black  mt-4 text-md ${
+            isNavOpen ? "grid  " : "hidden"
+          } lg:flex lg:justify-between lg:text-lg lg:relative  ${isDarkMode?'lg:bg-body-color lg:text-white':'lg:bg-white'} lg:nav-width  lg:w-full lg:h-full lg:top-0  lg:-left-24   p-1 pl-5 pr-2 rounded-2xl`} id="nav"
         >
           <Link  to="about"
             spy={true}
@@ -71,9 +107,13 @@ export default function RootLayout() {
           
           <Link to ="contact"  spy={true}
             smooth={true}
-            duration={500} onClick={closeNav} className="Contact bg-black  text-white   rounded-xl p-2 hover:opacity-90 hover:scale-105 duration-1000 cursor-pointer " >
+            duration={500} onClick={closeNav} className="Contact bg-black  text-white   rounded-xl p-2 hover:opacity-90 hover:scale-105 duration-1000 cursor-pointer transition-all  " >
             Contact Us
       </Link>
+
+      {/* dark mode */}
+      <DarkModeToggle isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode}   />
+
         </nav>
         <button onClick={toggleNav}>
           <i className="fas fa-bars text-3xl mr-10 cursor-pointer p-2"></i>

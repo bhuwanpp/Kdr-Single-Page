@@ -1,3 +1,33 @@
+ export function SubmitButton(){
+  return(
+    <div className="submit -ml-20">
+
+<div className=" mb-5 mt-10">
+      <form className="
+        text-center ">
+        <label className="ml-5">
+          <span className="text-xl font-semibold mr-8 ">Name:</span>
+          <input type="name" name="name" required className="border text-lg h-10 text-black border-black  outline-none  p-1 w-64  mb-5" />
+        </label>
+        <br />
+        <label>
+          <span className="text-xl font-semibold mr-3">Your email:</span>
+          <input type="email" name="email" required className="border text-black border-black  outline-none  text-base h-10 p-1 w-64  mb-5" />
+        </label>
+        <br />
+        <label  className="flex flex-col justify-center items-center ">
+          <span className="text-xl font-semibold mr-3 -ml-60 mb-3">Your message:</span>
+          <br />
+          <textarea name="message" required className=" message border border-gray-500 outline-none p-2 h-32 ml-24   resize-y mb-7 text-black "></textarea>
+        </label>
+        <button className="bg-green-600 text-white ml-20   rounded-xl px-4 py-1 hover:bg-green-700 cursor-pointer text-lg ">Submit</button>
+      </form>
+
+    </div>
+</div>
+  )
+ }
+
 
 export default function ContactUs() {
   // for phone Number
@@ -55,7 +85,7 @@ export default function ContactUs() {
 <p className="mr-5">[Head Office]:</p>
 <a href="https://www.google.com/maps?output=search&q=kdr+consultancy&source=lnms&entry=mc&sa=X&ved=2ahUKEwii-I65x8yAAxXAyqACHUDSBZEQ0pQJegQICxAB" target="_blank">
 <p className="underline cursor-pointer">Putalisadak-28, Kathmandu (Near Shankardev Campus)  
-<p className=" add-absolute absolute   pointer-events-none right-36 bg-blue-50 text-base border opacity-0">Click address to go to location </p>
+<p className=" add-absolute absolute   pointer-events-none right-36 bg-blue-50 text-black rounded-md font-mono text-base border opacity-0">Click address to go to location </p>
 </p>
 </a>
 </div>
@@ -79,6 +109,7 @@ Sita RiceMill-02, Tilottama, Butwal
 
   </a>
 </div>
+<SubmitButton/>
 </div>
   )
 }
