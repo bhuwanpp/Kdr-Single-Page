@@ -74,7 +74,7 @@ export default function RootLayout() {
       <div className="header flex items-center justify-between  fixed top-0  h-20 z-30  ">
       <Header isDarkMode={isDarkMode} />
         <nav
-          className={`nav items-center justify-items-center absolute top-24 left-10 right-96 cursor-pointer z-10  sm:w-11/12 w-10/12 h-96  ${isDarkMode? 'bg-gray-200': 'bg-gray-100'} text-black  mt-4 text-md ${
+          className={`nav items-center justify-items-center absolute top-24 left-10 right-96 cursor-pointer z-10  sm:w-11/12 w-10/12 h-96 pb-5  ${isDarkMode? 'bg-gray-200': 'bg-gray-100'} text-black  mt-4 text-md ${
             isNavOpen ? "grid  " : "hidden"
           } lg:flex lg:justify-between lg:text-lg lg:relative  ${isDarkMode?'lg:bg-body-color lg:text-white':'lg:bg-white'} lg:nav-width  lg:w-full lg:h-full lg:top-0  lg:-left-24   p-1 pl-5 pr-2 rounded-2xl`} id="nav"
         >
@@ -116,7 +116,15 @@ export default function RootLayout() {
 
         </nav>
         <button onClick={toggleNav}>
-          <i className="fas fa-bars text-3xl mr-10 cursor-pointer p-2"></i>
+        {
+            isNavOpen ?  <div className="div  text-[41px] text-red-500 mr-10 cursor-pointer p-2">
+            <iconify-icon icon="ph:x-fill"></iconify-icon>
+      
+          </div>  : <i className="fas fa-bars text-3xl mr-10 cursor-pointer p-2"></i>
+           
+          }
+         
+       
         </button>
       </div>
       

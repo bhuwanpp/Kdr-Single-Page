@@ -41,11 +41,17 @@ const Main = () => {
       const handlePlayClick = () => {
         setIsPlaying(true);
       };
+      const handleCircleClick = (index) => {
+        setActiveSlide(index);
+      };
       
   
 const renderCircles = () => {
   return slideData.map((_, index) => (
-    <div key={index} className="circle flex justify-between w-8">
+    <div key={index}
+    onClick={() => handleCircleClick(index)}
+     className="circle flex justify-between w-8 cursor-pointer"
+    >
       <FontAwesomeIcon
         icon={index === activeSlide ? faCircleSolid : faCircleRegular}
         className={index === activeSlide ? 'solid-circle text-xl' : 'regular-circle text-xl'}
@@ -53,9 +59,17 @@ const renderCircles = () => {
     </div>
   ));
 };
+
+const handleImageMouseEnter = () => {
+  setIsPlaying(false); // Pause automatic sliding when mouse enters
+};
+
+const handleImageMouseLeave = () => {
+  setIsPlaying(true); // Resume automatic sliding when mouse leaves
+};
     
     return ( 
-        <main className=" main pt-10 w-screen   relative mt-10 md:mt-0   grid gap-5  grid-cols-1 md:grid-cols-2 ml-12 mr-14 justify-center items-center" id="main">
+        <main className=" main pt-10 w-screen  relative mt-10 md:mt-0   grid gap-5  grid-cols-1 md:grid-cols-2 ml-12 mr-14 pr-5 justify-center items-center" id="main">
           
             <div className="m-left mr-10 ">
               
@@ -75,7 +89,11 @@ const renderCircles = () => {
             </div>
             <div className="m-right relative h-96 text-black mr-20" >
             
-                <img src={slideData[activeSlide]} alt="Slide" className=" flex transform transition-all ease-in-out duration-500  rounded-3xl " />
+                <img src={slideData[activeSlide]} 
+                onMouseEnter={handleImageMouseEnter}
+                onMouseLeave={handleImageMouseLeave} 
+                 alt="Slide" 
+                 className=" flex transform transition-all ease-in-out duration-500  rounded-3xl " />
              
 
                 <div className="buttons absolute -bottom-24 flex justify-between items-center w-56 mt-8 ml-32">
@@ -83,9 +101,9 @@ const renderCircles = () => {
                 <i className="fa-solid fa-chevron-left  text-2xl  cursor-pointer hover:scale-125 duration-500 bg-blue-100 p-1 rounded-full" onClick={handleLeftClick}></i>
               
                 {isPlaying ? (
-                <i class={`fa-solid fa-circle-pause text-3xl`}   onClick={handlePauseClick}></i>
+                <i class={`fa-solid fa-circle-pause text-3xl hover:scale-105 cursor-pointer transition-all`}   onClick={handlePauseClick}></i>
                  ) : (
-                 <i class="fa-solid fa-circle-play text-3xl" onClick={handlePlayClick}></i>
+                 <i class="fa-solid fa-circle-play text-3xl hover:scale-105 cursor-pointer transition-all" onClick={handlePlayClick}></i>
                    )}
                           
                     <div className="circle-container flex">
