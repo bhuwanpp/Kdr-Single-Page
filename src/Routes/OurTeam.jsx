@@ -3,7 +3,7 @@ import TeamMember2 from "../teamMembers/TeamMember2";
 
 const OurTeam = () => {
     return (
-        <div className="ourTeams pt-52 w-screen" id="ourTeam">
+        <div className="ourTeams h-screen pt-52 w-screen" id="ourTeam">
             <div className="team text-center">
                 <h2 className="font-semibold text-xl -ml-5">Our Team</h2>
                 <p className="text-lg">We introduce our Expert Team</p>

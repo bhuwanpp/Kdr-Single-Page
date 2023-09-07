@@ -96,26 +96,26 @@ const handleImageMouseLeave = () => {
                  className=" flex transform transition-all ease-in-out duration-500  rounded-3xl " />
              
 
-                <div className="buttons absolute -bottom-24 flex justify-between items-center w-56 mt-8 ml-32">
+                <div className="buttons absolute md:-bottom-1 -left-16 sm:left-14  lg:left-0 md:-left-14 lg:-bottom-24 flex justify-between items-center w-56 mt-8 ml-32">
 
-                <i className="fa-solid fa-chevron-left  text-2xl  cursor-pointer hover:scale-125 duration-500 bg-blue-100 p-1 rounded-full" onClick={handleLeftClick}></i>
+                <i className="fa-solid fa-chevron-left sm:text-2xl text-xl  cursor-pointer hover:scale-125 duration-500 bg-blue-100 p-1 rounded-full" onClick={handleLeftClick}></i>
               
                 {isPlaying ? (
-                <i class={`fa-solid fa-circle-pause text-3xl hover:scale-105 cursor-pointer transition-all`}   onClick={handlePauseClick}></i>
+                <i class={`fa-solid fa-circle-pause text-2xl sm:text-3xl hover:scale-105 cursor-pointer transition-all`}   onClick={handlePauseClick}></i>
                  ) : (
-                 <i class="fa-solid fa-circle-play text-3xl hover:scale-105 cursor-pointer transition-all" onClick={handlePlayClick}></i>
+                 <i class="fa-solid fa-circle-play text-2xl sm:text-3xl hover:scale-105 cursor-pointer transition-all" onClick={handlePlayClick}></i>
                    )}
                           
                     <div className="circle-container flex">
                     {renderCircles()}
                   </div>
-                     <i className="fa-solid fa-chevron-right text-2xl cursor-pointer hover:scale-125 duration-500 bg-blue-100 p-1 rounded-full" onClick={handleRightClick}></i>
+                     <i className="fa-solid fa-chevron-right sm:text-2xl text-xl cursor-pointer hover:scale-125 duration-500 bg-blue-100 p-1 rounded-full" onClick={handleRightClick}></i>
                 </div>
 
             </div>
 
               {/* bouncy mouse  */}
-            <div className="bounce  animate-bounce flex items-center ">
+            <div className="bounce hidden md:flex  animate-bounce items-center ">
               <div className="mouse text-3xl">
             <iconify-icon icon="clarity:mouse-solid"></iconify-icon>
               </div>

@@ -51,7 +51,7 @@ export default function ContactUs() {
   
     
   return( 
-<div className="contact-us pt-32 grid gap-5  text-2xl  justify-center ml-20" id="contact">
+<div className="contact-us  pt-32 grid gap-5  text-2xl  justify-center ml-20" id="contact">
 <h5 className="text-center  text-3xl font-bold underline">Contact Information</h5>
   <div className="phone flex items-center gap-10">
   <i className="fa-solid fa-phone text-5xl mr-5"></i>  

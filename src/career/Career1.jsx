@@ -55,7 +55,7 @@ const Career1 = () => {
   return (
     <>
       <div className="services flex justify-center mr-5 text-black">
-        <div className="services-1 w-96 p-3 text-center ml-10 rounded-xl bg-gray-100 cursor-pointer hover:bg-white duration-500 hover:shadow-lg">
+        <div className="services-1 w-96 p-3 text-center  rounded-xl bg-gray-100 cursor-pointer hover:bg-white duration-500 hover:shadow-lg">
           <div className="up w-12 mb-2 px-2 py-3 border border-gray-800 rounded-full hover:shadow-lg ml-40">
             <i className="fa-solid fa-business-time"></i>
           </div>

@@ -76,7 +76,7 @@ export default function RootLayout() {
         <nav
           className={`nav items-center justify-items-center absolute top-24 left-10 right-96 cursor-pointer z-10  sm:w-11/12 w-10/12 h-96 pb-5  ${isDarkMode? 'bg-gray-200': 'bg-gray-100'} text-black  mt-4 text-md ${
             isNavOpen ? "grid  " : "hidden"
-          } lg:flex lg:justify-between lg:text-lg lg:relative  ${isDarkMode?'lg:bg-body-color lg:text-white':'lg:bg-white'} lg:nav-width  lg:w-full lg:h-full lg:top-0  lg:-left-24   p-1 pl-5 pr-2 rounded-2xl`} id="nav"
+          } lg:flex lg:justify-between lg:text-base lg:relative  ${isDarkMode?'lg:bg-body-color lg:text-white':'lg:bg-white'} lg:nav-width  lg:w-screen lg:h-full lg:top-0  lg:-left-24   p-1 pl-5 pr-2 rounded-2xl `} id="nav"
         >
           <Link  to="about"
             spy={true}

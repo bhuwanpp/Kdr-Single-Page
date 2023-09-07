@@ -81,12 +81,12 @@ import Services3 from "../services/Services3";
 
 const Services = () => {
   return (
-    <div className="main-services pt-32 grid pb-20" id="services">
-      <div className="here grid items-center justify-center ml-96 mb-5">
+    <div className="main-services grid items-center justify-center pt-32  pb-20" id="services">
+      <div className="here mb-5">
         <h2 className="text-3xl text-center mb-5 font-bold">Here's what we are good at.</h2>
         <p className="text-lg text-center ml-5">We mainly specialize in creating beautiful and functional websites, web-apps, and mobile apps as well.</p>
       </div>
-      <div className="service-components grid gap-6">
+      <div className="service-components grid gap-6 ">
 
       <Services1/>
       <Services2/>

@@ -3,7 +3,7 @@ import React from 'react'
 export default function QuickLinks() {
   return (
     <>
-    <div className="quick-links pt-52 text-xl text-center" id='quick-links'>
+    <div className="quick-links h-screen pt-52 text-xl text-center" id='quick-links'>
       <h2 className='text-2xl'>This is the quick Link For Everything you need in CA </h2>     
 
     <div className="links mt-8   text-3xl transition-all  font-semibold">
