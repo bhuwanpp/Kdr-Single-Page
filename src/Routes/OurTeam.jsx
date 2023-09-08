@@ -5,10 +5,10 @@ const OurTeam = () => {
     return (
         <div className="ourTeams h-screen pt-52 w-screen" id="ourTeam">
             <div className="team text-center">
-                <h2 className="font-semibold text-xl -ml-5">Our Team</h2>
+                <h2 className="font-semibold text-xl ">Our Team</h2>
                 <p className="text-lg">We introduce our Expert Team</p>
             </div>
-            <div className="team-members flex ml-10 mr-12">
+            <div className="team-members sm:flex grid ">
                <TeamMember1/>
                <TeamMember2/>
                <TeamMember2/>

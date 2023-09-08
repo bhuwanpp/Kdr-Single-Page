@@ -54,7 +54,7 @@ const Career1 = () => {
 
   return (
     <>
-      <div className="services flex justify-center mr-5 text-black">
+      <div className="services flex justify-start sm:ml-0 ml-14 sm:justify-center  mr-5 text-black">
         <div className="services-1 w-96 p-3 text-center  rounded-xl bg-gray-100 cursor-pointer hover:bg-white duration-500 hover:shadow-lg">
           <div className="up w-12 mb-2 px-2 py-3 border border-gray-800 rounded-full hover:shadow-lg ml-40">
             <i className="fa-solid fa-business-time"></i>
@@ -74,7 +74,7 @@ const Career1 = () => {
               <div className="one flex relative ml-32 z-20 mb-3 mt-3">
                 <i className="fa-solid fa-arrow-turn-up rotate-90 mr-5"></i>
                 <button onClick={() => handleButtonClick('first')} className='hover:bg-gray-200 p-1 rounded-lg duration-300 text-xl font-semibold hover:drop-shadow-xl'>Account</button>
-                <div ref={moreInfoRef} className={`more-info absolute h-60 w-96  bg-gray-200 top-0 -left-20 z-10 ${activeButton === 'first' ? '' : 'hidden'}`}>
+                <div ref={moreInfoRef} className={`more-info absolute h-60 w-96  bg-gray-200 top-0 -left-36 sm:-left-20 z-10 ${activeButton === 'first' ? '' : 'hidden'}`}>
                   <button onClick={handleCloseClick}>
                     <i className="fa-solid fa-x absolute text-xl top-1 right-2 text-red-600 hover:bg-red-100 p-2 rounded-full hover:scale-110 duration-500"></i>
                   </button>
@@ -85,7 +85,7 @@ const Career1 = () => {
               <div className="two flex relative ml-32 z-10 mb-3 mt-3">
                 <i className="fa-solid fa-arrow-turn-up rotate-90 mr-5"></i>
                 <button onClick={() => handleButtonClick('second')} className='hover:bg-gray-200 p-1 rounded-lg duration-300 text-xl font-semibold hover:drop-shadow-xl'>Audit</button>
-                <div ref={moreInfoRef} className={`more-info absolute h-60 w-96 bg-gray-200 top-0 -left-20 ${activeButton === 'second' ? '' : 'hidden'}`}>
+                <div ref={moreInfoRef} className={`more-info absolute h-60 w-96 bg-gray-200 top-0 -left-36 sm:-left-20  ${activeButton === 'second' ? '' : 'hidden'}`}>
                   <button onClick={handleCloseClick}>
                     <i className="fa-solid fa-x absolute text-xl top-1 right-0 text-red-600 hover:bg-red-100 p-2 rounded-full hover:scale-110 duration-500"></i>
                   </button>

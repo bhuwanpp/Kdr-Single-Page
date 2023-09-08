@@ -32,8 +32,8 @@ const TeamMember1 = () => {
 
     return (
             <div className="members  mt-5">
-                <div className="team-one relative flex flex-col justify-center items-center cursor-pointer">
-                    <img src="../Images/team member.webp" alt="photo" className="rounded-full" />
+                <div className="team-one relative grid justify-start sm:ml-0 ml-36   sm:flex sm:flex-col  sm:justify-center sm:items-center cursor-pointer">
+                    <img src="../Images/team member.webp" alt="photo" className="rounded-full w-20 ml-10 sm:ml-0" />
                     <button onClick={handleButtonClick}>
                         <h5 className="text-semibold text-3xl font-semibold hover:drop-shadow-xl hover:scale-105 duration-1000"> CA Pawan Bhusal</h5>
                     </button>
