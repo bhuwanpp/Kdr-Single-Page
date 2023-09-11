@@ -51,15 +51,15 @@ export default function ContactUs() {
   
     
   return( 
-<div className="contact-us  pt-32 grid gap-5  text-2xl  justify-center ml-20" id="contact">
-<h5 className="text-center  text-3xl font-bold underline">Contact Information</h5>
-  <div className="phone flex items-center gap-10">
-  <i className="fa-solid fa-phone text-5xl mr-5"></i>  
-  <p className="hover:scale-105 duration-1000 cursor-pointer  underline underline-offset-2 text-blue-600 " onClick={() => handleNumberClick('9847508342')}>+977 9847508342 </p>
-  <p>[H.O.]</p>
+<div className="contact-us  pt-32 grid gap-5  text-2xl  sm:justify-center justify-start ml-10 " id="contact">
+<h5 className=" text-start sm:text-center  text-3xl font-bold underline">Contact Information</h5>
+  <div className="phone grid gap-5 sm:flex items-center ">
+  <i className="fa-solid fa-phone text-5xl ml-10 sm:ml-0 mr-5"></i>  
+  <p className="  hover:scale-105 duration-1000 cursor-pointer  underline underline-offset-2 text-blue-600 " onClick={() => handleNumberClick('9847508342')}>+977 9847508342 </p>
+  <p className="ml-10 sm:ml-0">[H.O.]</p>
 
   <p className="hover:scale-105 duration-1000 cursor-pointer  underline underline-offset-2 text-blue-600 " onClick={() => handleNumberClick('98036108050')}>+977 9803610850 </p>
-  <p>[B.O.]</p>
+  <p className="ml-10 sm:ml-0">[B.O.]</p>
   </div>
   {/* whatsapp */}
   <div className="whatsapp flex">
@@ -74,34 +74,34 @@ export default function ContactUs() {
   {/* gmail */}
   <div className="gmail flex">
     <p>Gmail : </p>
-    <p className="underline ml-9 underline-offset-2 text-blue-600 cursor-pointer hover:scale-105 duration-1000" onClick={() => window.location.href = 'mailto: kdrconsultancy2078@gmail.com'}>kdrconsultancy2078@gmail.com</p>
+    <p className="underline sm:text-2xl text-xl  sm:ml-10 ml-3 underline-offset-2 text-blue-600 cursor-pointer hover:scale-105 duration-1000" onClick={() => window.location.href = 'mailto: kdrconsultancy2078@gmail.com'}>kdrconsultancy2078@gmail.com</p>
   </div>
 
 {/* address  */}
-<h5 className="text-center  text-3xl mt-10 font-bold underline">Address</h5>
+<h5 className=" ml-20 sm:ml-0 text-start sm:text-center  text-3xl mt-10 font-bold underline">Address</h5>
 {/* head office  */}
 
-<div className="head-office flex relative">
+<div className="head-office grid gap-1 sm:flex relative">
 <p className="mr-5">[Head Office]:</p>
 <a href="https://www.google.com/maps?output=search&q=kdr+consultancy&source=lnms&entry=mc&sa=X&ved=2ahUKEwii-I65x8yAAxXAyqACHUDSBZEQ0pQJegQICxAB" target="_blank">
-<p className="underline cursor-pointer">Putalisadak-28, Kathmandu (Near Shankardev Campus)  
-<p className=" add-absolute absolute   pointer-events-none right-36 bg-blue-50 text-black rounded-md font-mono text-base border opacity-0">Click address to go to location </p>
+<p className="underline cursor-pointer w-96 sm:w-full">Putalisadak-28, Kathmandu (Near Shankardev Campus)  
+<p className=" add-absolute absolute   pointer-events-none right-52 sm:right-36 bg-blue-50 text-black rounded-md font-mono text-base border opacity-0">Click address to go to location </p>
 </p>
 </a>
 </div>
 {/* Branch office */}
 
 
-<div className="branch-office flex">
+<div className="branch-office grid gap-1 sm:flex">
 <p className="mr-5">[Branch Office]:</p>
 <a href="#" target='_blank'>
-<p className="underline cursor-pointer">
+<p className="underline cursor-pointer w-96 sm:w-full">
 Sita RiceMill-02, Tilottama, Butwal
 </p>
 </a>
 </div>
-<div className="icon flex ml-80  w-20 mt-5 justify-between items-center">
-  <a href="https://www.facebook.com/KDRconsultacypvtltd" target="_blank">
+<div className="icon flex ml-24 sm:ml-0 justify-start sm:justify-center items-center mt-5">
+  <a href="https://www.facebook.com/KDRconsultacypvtltd" target="_blank" className="mr-10">
 <i className="fa-brands fa-square-facebook text-3xl hover:scale-110 duration-500 "></i>
   </a>
   <a href="https://www.instagram.com/kdr_consultancy_pvt_ltd/" target="_blank">

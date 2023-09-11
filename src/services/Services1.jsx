@@ -38,7 +38,7 @@ const DownList = ({ buttonLabel }) => {
   return (
     <>
       {/* services */}
-      <div className="services flex justify-center  mr-5  text-black">
+      <div className="services flex justify-start sm:justify-center  mr-5  text-black">
     {/* legal work for business */}
 
         <div className="services-1  w-96 p-3 text-center ml-10 rounded-xl bg-gray-100 cursor-pointer hover:bg-white duration-500 hover:shadow-lg">
