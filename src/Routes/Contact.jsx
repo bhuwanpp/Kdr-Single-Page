@@ -16,9 +16,9 @@
         </label>
         <br />
         <label  className="flex flex-col justify-center items-center ">
-          <span className="text-xl font-semibold mr-3 -ml-60 mb-3">Your message:</span>
+          <span className="text-xl font-semibold mr-3 -ml-48 sm:-ml-60 mb-3">Your message:</span>
           <br />
-          <textarea name="message" required className=" message border border-gray-500 outline-none p-2 h-32 ml-24   resize-y mb-7 text-black "></textarea>
+          <textarea name="message" required className=" message border border-gray-500 outline-none p-2   w-96 h-20 sm:w-[60%] sm:h-32    ml-10 sm:ml-24   resize-y mb-7 text-black "></textarea>
         </label>
         <button className="bg-green-600 text-white ml-20   rounded-xl px-4 py-1 hover:bg-green-700 cursor-pointer text-lg ">Submit</button>
       </form>

@@ -16,13 +16,6 @@
       margin: 0;
     }
 
-
-    @media (max-width:768px) {
-      body{
-      padding-bottom: 300px;
-      }
-      
-    }
     
     /* header  */
     .header{

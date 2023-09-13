@@ -41,9 +41,9 @@ const TeamMember1 = () => {
                     <p>BBS(T.U)</p>
 
                     {/* Use the ref to access the more-info container */}
-                    <div ref={moreInfoRef} className={`more-info absolute h-60 w-96 bg-gray-200 top-0 ${showMoreInfo ? '' : 'hidden'}`}>
+                    <div ref={moreInfoRef} className={`more-info  z-30 absolute h-60 w-96 bg-gray-200 -left-24 sm:left-0  ${showMoreInfo ? '' : 'hidden'}`}>
                      <button onClick={handleCloseClick}>
-                    <i class="fa-solid fa-x absolute text-xl top-1 right-2 text-red-600  hover:bg-red-100 p-2 rounded-full hover:scale-110 duration-500"></i>
+                    <i class="fa-solid fa-x absolute text-xl top-1  right-2 text-red-600  hover:bg-red-100 p-2 rounded-full hover:scale-110 duration-500"></i>
                      </button>
                     <p className='text-black'>This is more Info about Pawan Bhusal</p>
                     </div>

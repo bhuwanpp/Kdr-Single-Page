@@ -1,5 +1,6 @@
 import TeamMember1 from "../teamMembers/TeamMember1";
 import TeamMember2 from "../teamMembers/TeamMember2";
+import TeamMember3 from "../teamMembers/TeamMember3";
 
 const OurTeam = () => {
     return (
@@ -11,7 +12,8 @@ const OurTeam = () => {
             <div className="team-members sm:flex grid ">
                <TeamMember1/>
                <TeamMember2/>
-               <TeamMember2/>
+               <TeamMember3/>
+            
             </div>
         </div>
     );
