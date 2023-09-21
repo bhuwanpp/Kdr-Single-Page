@@ -50,9 +50,9 @@ const TeamMember2 = ({isDarkMode}) => {
             />
           )}
                     <button onClick={handleButtonClick}>
-                        <h5 className="text-semibold text-3xl font-semibold hover:drop-shadow-xl hover:scale-105 duration-1000"> CA Pawan Bhusal</h5>
+                        <h5 className="text-semibold text-3xl font-semibold hover:drop-shadow-xl hover:scale-105 duration-1000"> Hirendre K.Singh</h5>
                     </button>
-                    <p className="text-md">Chartered Accountant,</p>
+                    <p className="text-md">Account Officer</p>
                     <p>BBS(T.U)</p>
 
                     {/* Use the ref to access the more-info container */}
@@ -60,7 +60,7 @@ const TeamMember2 = ({isDarkMode}) => {
                      <button onClick={handleCloseClick}>
                     <i class="fa-solid fa-x absolute text-xl top-1 right-2 text-red-600  hover:bg-red-100 p-2 rounded-full hover:scale-110 duration-500"></i>
                      </button>
-                    <p className='text-black'>This is more Info about Pawan Bhusal</p>
+                    <p className='text-black'>This is more Info about Hirendra K.singh</p>
                     </div>
                 </div>
             </div>
