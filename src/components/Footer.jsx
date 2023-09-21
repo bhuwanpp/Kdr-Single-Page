@@ -1,13 +1,13 @@
-import { NavLink} from "react-router-dom"
+import { NavLink } from "react-router-dom"
 
 const Footer = () => {
     return (
         <div className="footer flex justify-between h-16  text-white   py-3 sm:py-5  md:py-5   px-3 sm:px-5 md:px-10 ">
             <div className=" f-left flex  items-center ">
                 <NavLink to="/" className="relative kdr-logo">
-                <h1 className=" mr-2 sm:mr-5 text-2xl">K.D.R Consultancy</h1>
-                <div className="home absolute -top-5 right-0 p-1 rounded-full  opacity-0 pointer-events-none duration-500">
-                    <p>Home</p>
+                    <h1 className=" mr-2 sm:mr-5 text-2xl">K.D.R Consultancy</h1>
+                    <div className="home absolute -top-5 right-0 p-1 rounded-full  opacity-0 pointer-events-none duration-500">
+                        <p>Home</p>
                     </div>
                 </NavLink>
 

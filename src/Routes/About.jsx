@@ -1,5 +1,3 @@
-
-
 const About = () => {
     return ( 
         <div className="about w-full h-24 pt-20 pb-10 sm:pb-0 sm:pt-0   sm:h-screen grid justify-center items-center  md:ml-0" id="about">
