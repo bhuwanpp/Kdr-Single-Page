@@ -30,7 +30,7 @@ export default function BackToTop() {
     <div className="backToTop relative">
       <button
         className={`back-to-top fixed bottom-20 -right-16  px-2 py-1 rounded-xl border-none bg-black text-white cursor-pointer opacity-0  duration-1000   transition-all hover:scale-110 ${
-          isVisible ? 'visible' : ''
+          isVisible ? 'visible right-2 opacity-100 ' : ''
         }`}
         onClick={scrollToTop}
       >

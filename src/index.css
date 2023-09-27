@@ -76,11 +76,7 @@
         width:100vw;
     }
    
-    .back-to-top.visible {
-        right: 6px;
-        opacity: 1;
-
-      }
+   
       .head-office:hover .add-absolute{
         opacity: 1;
       }
