@@ -5,7 +5,9 @@ import { useForm } from "react-hook-form";
 
   const onSubmit = (data) => {
     console.log("Data submitted:", data);
-    fetch('https://kdr-backend.onrender.com/kdr-form', {
+    const apiUrl = import.meta.env.VITE_REACT_APP_API_URL;
+
+    fetch(apiUrl, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
