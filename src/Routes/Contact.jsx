@@ -1,30 +1,56 @@
+import { useForm } from "react-hook-form";
+ 
  export function SubmitButton(){
-  return(
-    <div className="submit -ml-20">
+  const { register, handleSubmit,reset } = useForm();
 
-<div className=" mb-5 mt-10">
-      <form className="
-        text-center ">
+  const onSubmit = (data) => {
+    console.log("Data submitted:", data);
+    fetch('https://kdr-backend.onrender.com/kdr-form', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    })
+      .then((response) => {
+        if (response.ok) {
+          return response.json();
+         
+        } else {
+          throw new Error('Failed to submit the form');
+        }
+      })
+      .then((data) => {
+        console.log('Server response:', data); 
+        console.log('Before form reset');
+        reset();
+        console.log('reset done')
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
+  
+
+  return(
+      <form onSubmit={handleSubmit(onSubmit)} className="text-center pr-20  pb-10" >
         <label className="ml-5">
           <span className="text-xl font-semibold mr-8 ">Name:</span>
-          <input type="name" name="name" required className="border text-lg h-10 text-black border-black  outline-none  p-1 w-64  mb-5" />
+          <input {...register("name", { required: true })} type="text" name="name" required className="border text-lg h-10 text-black border-black  outline-none  p-1 w-64  mb-5" />
         </label>
         <br />
         <label>
           <span className="text-xl font-semibold mr-3">Your email:</span>
-          <input type="email" name="email" required className="border text-black border-black  outline-none  text-base h-10 p-1 w-64  mb-5" />
+          <input {...register("email", { required:true})} type="email" name="email" required className="border text-black border-black  outline-none  text-base h-10 p-1 w-64  mb-5" />
         </label>
         <br />
         <label  className="flex flex-col justify-center items-center ">
           <span className="text-xl font-semibold mr-3 -ml-48 sm:-ml-60 mb-3">Your message:</span>
           <br />
-          <textarea name="message" required className=" message border border-gray-500 outline-none p-2   w-96 h-20 sm:w-[60%] sm:h-32    ml-10 sm:ml-24   resize-y mb-7 text-black "></textarea>
+          <textarea {...register("message", { required: true })} name="message" required className=" message border border-gray-500 outline-none p-2   w-96 h-20 sm:w-[60%] sm:h-32    ml-10 sm:ml-24   resize-y mb-7 text-black "></textarea>
         </label>
-        <button className="bg-green-600 text-white ml-20   rounded-xl px-4 py-1 hover:bg-green-700 cursor-pointer text-lg ">Submit</button>
+        <button type="submit" className="bg-green-600 text-white ml-20   rounded-xl px-4 py-1 hover:bg-green-700 cursor-pointer text-lg ">Submit</button>
       </form>
-
-    </div>
-</div>
   )
  }
 
