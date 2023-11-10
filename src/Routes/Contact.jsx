@@ -1,7 +1,10 @@
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
+
  
  export function SubmitButton(){
   const { register, handleSubmit,reset } = useForm();
+  const navigate = useNavigate();
 
   const onSubmit = (data) => {
     console.log("Data submitted:", data);
@@ -27,6 +30,7 @@ import { useForm } from "react-hook-form";
         console.log('Before form reset');
         reset();
         console.log('reset done')
+        navigate("/form");
       })
       .catch((error) => {
         console.error(error);

@@ -7,13 +7,8 @@ import {
 
 // pages
 import Home from './Routes/Home'
-import About from './Routes/About'
-import OurTeam from './Routes/OurTeam'
-import Services from './Routes/Services'
-import ContactUs from './Routes/Contact'
 import NotFound from './Routes/NotFound'
-import Career from './Routes/Career'
-import QuickLinks from './Routes/QuickLinks'
+import Form from './Routes/Form'
 
 
 // layouts
@@ -25,13 +20,9 @@ const router = createBrowserRouter(
     <>
       <Route path="/" element={<RootLayout />}>
         <Route index element={<Home />} />
-        {/* <Route path="about" element={<About />} /> */}
-        {/* <Route path="services" element={<Services />} />
-      <Route path="ourTeam" element={<OurTeam />} />
-      <Route path="quickLinks" element={<QuickLinks/>} />
-      <Route path="career" element={<Career/>} />
-      <Route path="contact" element={<ContactUs />} /> */}
       </Route>
+      <Route path="/form" element={<Form />} />
+
       <Route path='*' element={<NotFound />} />
     </>
   )

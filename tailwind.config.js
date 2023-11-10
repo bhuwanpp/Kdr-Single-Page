@@ -7,7 +7,9 @@ export default {
   theme: {
     extend: {
       colors:{
-        'body-color':'#232529'
+        'body-color':'#232529',
+        'form':'#eae7dc',
+        'form-text':'#e85a4f'
       }
     },
   },
