@@ -49,17 +49,17 @@ const TeamMember3 = ({isDarkMode}) => {
             />
           )}
                     <button onClick={handleButtonClick}>
-                        <h5 className="text-semibold text-3xl font-semibold hover:drop-shadow-xl hover:scale-105 duration-1000"> Bhuwan Paudel</h5>
+                        <h5 className="text-semibold text-3xl font-semibold hover:drop-shadow-xl hover:scale-105 duration-1000">Dina Rai</h5>
                     </button>
-                    <p className="text-md">IT</p>
-                    <p>CSIT(T.U)</p>
+                    <p className="text-md">Account officer</p>
+                    <p>BBS(T.U)</p>
 
                     {/* Use the ref to access the more-info container */}
                     <div ref={moreInfoRef} className={`more-info z-30 absolute h-60 w-96 bg-gray-200 top-0 -left-32 sm:-left-52 md:left-0  ${showMoreInfo ? '' : 'hidden'}`}>
                      <button onClick={handleCloseClick}>
                     <i class="fa-solid fa-x absolute text-xl top-1 right-2 text-red-600  hover:bg-red-100 p-2 rounded-full hover:scale-110 duration-500"></i>
                      </button>
-                    <p className='text-black'>This is more Info about Bhuwan paudel</p>
+                    <p className='text-black'>This is more Info about Dina Rai</p>
                     </div>
                 </div>
             </div>
